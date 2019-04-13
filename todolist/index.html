@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>ToDo-list</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" href="scr/css/jquery-ui.css">
+	<script src="scr/js/jquery-3.3.1.min.js"></script>
+	<script src="scr/js/jquery-ui.js"></script>
+
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<input id="search" type="text" name="google-search" placeholder="Google search" autofocus>
+		</header>
+		<div class="main">
+<!-- -------------------------- ToDo-list ------------------------------ -->
+			<div class="todo-container">
+				<div class="todo-main">
+					<div class="todo-input">
+						<input id="input-task" type="text" name="task" placeholder="Введите задачу">
+					</div>
+					<div class="todo-task"></div>
+				</div>
+			</div>
+			
+<!-- -------------------------- Tab панель ------------------------------ -->
+			<div id="sortable"  class="tab-container">
+				<div class="tab-item-add">
+					<button id="item-add-url"></button>
+				</div>
+			</div>
+		</div>
+<!-- -------------------------- Погода ------------------------------ -->
+		<footer class="footer">
+			<div class="select">
+				<div class="current-city">Выбрать город</div>
+				<div class="city">
+					<div class="city-select" data-id="629634">Брест</div>
+					<div class="city-select" data-id="620127">Витебск</div>
+					<div class="city-select" data-id="627907">Гомель</div>
+					<div class="city-select" data-id="627904">Гродно</div>
+					<div class="city-select" data-id="625144">Минск</div>
+					<div class="city-select" data-id="625665">Могилев</div>
+				</div>
+			</div>
+			<div class="img-weather"></div>
+			<div id="temp-current"  class="temp-info" ></div>
+			<div id="sunrise"  class="temp-info"></div>
+			<div id="sunset"  class="temp-info"></div>
+			<div id="humidity" class="temp-info"></div>
+			<div id="pressure" class="temp-info"></div>
+			<div id="speed" class="temp-info"></div>Ы
+		</footer>
+	</div>
+<!-- -------------------------- Модальное окно для tab панели ------------------------------ -->
+	<div class="modal-wrapper">
+			<div class="modal-container">
+				<span class="close">&times;</span>
+				<div class="modal-content">
+					<span>Добавление сайта на панель</span>
+					<input class="input-site" type="text" placeholder="Введите название" autofocus>
+					<input class="input-site" type="text" placeholder="Введите URL сайта" value="www.">
+					<button id="add-tab-button">Добавить сайт</button>
+				</div>
+			</div>
+	</div>
+
+	<div class=" edit-modal-wrapper">
+			<div class="modal-container">
+				<span class="close">&times;</span>
+				<div class="modal-content">
+					<span>Редактирование вкладки</span>
+					<input class="edit-site" type="text" placeholder="Введите название" autofocus>
+					<input class="edit-site" type="text" placeholder="Введите URL сайта" >
+					<button id="edit-tab-button">Изменить</button>
+				</div>
+			</div>
+	</div>
+
+	<script src="main.js"></script>
+	
+</body>
+</html>

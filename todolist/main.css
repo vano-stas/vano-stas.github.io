@@ -1,0 +1,651 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+html,
+body {
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.wrapper {
+	position: relative;
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+  flex-direction: column;  
+  text-align: center;
+  height: 100%;
+	background: linear-gradient(45deg, rgba(20, 0, 92, 0.6), rgba(4, 209, 21, 0.4)), url(img/urban-city.jpg) no-repeat;
+	background-size: 100% 100%;
+  
+}
+
+.header {
+	height: 8%;
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer {
+	height: 10%;
+	flex: 0 0 auto;
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	flex-direction: row wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.575);
+}
+
+.main {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+  align-items: stretch;
+  height: 50%;
+  flex: 1 0 auto;
+  justify-content: space-evenly;
+}
+/* --------------------------------------------------------------------css свойства для todo-list------------------ */
+.todo-container {
+	width: 50%;
+	margin: 10px;
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+}
+
+.todo-main {
+	height: 100%;
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.todo-input {
+	width: 100%;
+	height: 60px;
+	flex-direction: column;
+}
+
+#input-task {
+	margin-top: 10px;
+	width: 88%;
+	height: 30px;
+	border-radius: 8px;
+}
+
+.todo-task {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: auto;
+}
+
+.task-container {
+	background: rgb(255, 255, 255, 0.6);
+	border-radius: 8px;
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	flex-direction: row;
+	height: auto;
+	margin-top: 8px;
+	flex: 0 0 auto;
+	width: 90%;
+
+}
+
+.task {
+	height: auto;
+	padding: 5px;
+	margin: auto;
+	flex: 1 0 auto;
+	width: 80%;
+	text-align: justify;
+	vertical-align: middle;
+}
+
+.task-container:hover .delete-wrap {
+	opacity: 1;
+}
+
+.delete-wrap {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	width: 10%;
+	min-width: 32px;
+	border-radius: 8px;
+	opacity: 0;
+}
+
+.delete-wrap div {
+	width: 100%;
+	height: 25px;
+	margin: auto;
+	background: url(img/trash-02.png) center center no-repeat;
+	background-size: contain;
+}
+
+.delete-wrap:hover {
+	background: rgba(255, 0, 0, 1);
+}
+
+.current-task {
+	text-decoration: none;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+
+.task-done {
+	opacity: 1;
+	transition: opacity 0.5s;
+}
+
+.task-done p {
+	text-decoration: line-through;
+	color: #8d8d8d;
+}
+
+
+.icon-done {
+	height: auto;
+	width: auto;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	margin: auto;
+	flex: 1 0 auto;
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.img-icon-done {
+	height: auto;
+	width: 25px;
+}
+
+
+/*  ------------------------------------------------------------------------css свойства для экспресс-панели--------------- */
+.tab-container {
+	width: 50%;
+	margin: 10px;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	overflow: auto;
+
+}
+
+.tab-item {
+	border-radius: 10px;
+	display: flex;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	width: 8vw;
+  height: 8vw;
+	flex-direction: column;
+	justify-content: flex-end;
+	background-position: center center;
+	background-size: cover;
+	-webkit-transition: all 0.3s ease;;
+  -moz-transition: all 0.3s ease;;
+  -o-transition: all 0.3s ease;;
+  transition: all 0.3s ease;
+}
+
+.tab-item:hover {
+	background: rgb(0, 0, 0, 0.2);
+	box-shadow:  0 0 0 2px #ffffff;
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
+
+
+.item-name {
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	height: 20px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #ffffff;
+}
+
+.item-name:hover {
+	background-color: rgba(0, 0, 0, 0.7);
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.delete-tab {
+	background-color: rgb(0, 0, 0, 0.4);
+	color: #ffffff;
+	border-radius: 8px;
+	align-self: flex-start;
+	flex: 0 0 auto;
+	width: 16px;
+	height: 16px;
+	margin-bottom: auto;
+	margin-left: 3px;
+	margin-top: 3px;
+}
+
+.delete-tab:hover {
+	color: #ffffff;
+	border-color: currentColor;
+	background-color: rgb(66, 66, 66);
+}
+
+
+.tab-item-add {
+	border-radius: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	width: 8vw;
+	height: 8vw;
+	display: flex;
+}
+
+#item-add-url {
+	background: rgba(255, 255, 255, 0.3) url(/img/add-icon-08.png) ;
+	background-position: center center;
+	background-size: contain;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	padding: 5px 10px 7px 10px;
+	border: none;
+  font: inherit;
+	color: inherit;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease;;
+  -moz-transition: all 0.3s ease;;
+  -o-transition: all 0.3s ease;;
+  transition: all 0.3s ease;
+}
+
+#item-add-url:hover {
+	color: #FFFFFF;
+	background: rgba(255, 255, 255, 0.5) url(/img/add-icon-08.png) center center;
+	background-size: contain;
+	box-shadow:  0 0 0 2px #ffffff;
+	transform: scale(1.1);
+}
+
+
+
+/* -----------------------------------------------------------------------------css для погоды------------------------- */
+.footer * {
+	color: #ffffff;
+	font-size: 14px;
+}
+
+.city {
+	background: rgba(90, 90, 90, 0.5);
+	width: 100%;
+	position: relative;
+	top:-180px;
+	left: 10px;
+	display: none;
+	flex-direction: column;
+}
+
+.city-select {
+	border-bottom: solid 1px #000000;
+	text-align: left;
+	width: 100%;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.current-city {
+	padding-left: 10px;
+	text-align: left;
+	position: relative;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.select {
+	position: relative;
+	width: 45%;
+	height: 30px;
+}
+
+.weather-info {
+	width: 60%;
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+}
+
+.img-weather {
+	height: 100%;
+	width: 10%;
+}
+
+.img-weather img {
+	display: block;
+	width: 60px;
+	height: 60px;
+	margin-left: auto;
+}
+
+.temp-info {
+	width: 100%;
+}
+
+.temp-info span {
+	display: block;
+	align-content: flex-end;
+
+	width: 100%;
+
+}
+
+.temp-current {
+	font-size: 25px;
+}
+
+
+
+/* ------------------------------------------------------------------------css свойства для скроллинга----------------- */
+::-webkit-scrollbar {
+	width: 12px;
+	height: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.7);
+	border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 12px rgb(0, 0, 0);
+}
+
+
+/* --------------------------------------------------------------- модальное окно---------------------------------------------------- */
+
+.modal-wrapper {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	vertical-align: middle;
+	background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-container {
+	background: linear-gradient(30deg, rgb(20, 0, 92), rgba(7, 105, 15, 0.92));
+	background : -ms-linear-gradient( top right#07690f92 0%, #14005c92 100% );
+	border-radius: 20px;
+	height: 250px;
+	width: 450px;
+	margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+	transform: translate(-50%, -50%);
+}
+
+
+.modal-content {
+	height: 220px;
+	width: 450px;
+	text-align: center;
+	position: absolute;
+}
+
+.modal-content * {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.close {
+	display: block;
+	background: rgba(0, 0, 0, 0.2);
+	color: rgb(18, 126, 27);
+	border-radius: 10px;
+	width: 20px;
+	height: 20px;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	margin-left: auto;
+	margin-top: 10px;
+	margin-right: 10px;
+	cursor: default;
+}
+
+.close:hover {
+	color: rgb(18, 126, 27);
+	border-color: currentColor;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content span {
+	font-size: 18px;
+	color: #afafaf;
+}
+
+.input-site {
+	background-color: #ffffff;
+	color: #afafaf;
+	outline: none;
+	font-size: 14px;
+	width: 350px;
+	height: 30px;
+	box-shadow: ;
+	border-style: none;
+	border-radius: 8px;
+	padding-left: 10px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.input-site::placeholder {
+	color: #afafaf;
+}
+
+.input-site:focus {
+	color: #000000;
+	background-color: #ffffff;
+}
+
+.input-site:hover {
+   color: #000000;
+}
+
+#add-tab-button {
+	border-radius: 5px;
+	padding: 5px 10px 7px 10px;
+	border: none;
+  font: inherit;
+	color: inherit;
+  background-color:  #a1a1a1;
+	cursor: pointer;
+}
+
+#add-tab-button:hover {
+   color: #000000;
+   background-color: rgb(88, 88, 88);
+}
+
+/* ------------------------------------------------------------------------------Для редактирования вкладки------------------------------- */
+.edit-modal-wrapper {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+  vertical-align: middle;
+}
+
+
+.edit-site {
+	background-color: #ffffff;
+	color: #afafaf;
+	outline: none;
+	font-size: 14px;
+	width: 350px;
+	height: 30px;
+	box-shadow: ;
+	border-style: none;
+	border-radius: 8px;
+	padding-left: 10px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+}
+.edit-site::placeholder {
+	color: #afafaf;
+}
+
+.edit-site:focus {
+	color: #000000;
+}
+
+.edit-site:hover {
+  color: #000000;
+}
+
+#edit-tab-button {
+	border-radius: 5px;
+	padding: 5px 10px 7px 10px;
+	border: none;
+  font: inherit;
+	color: inherit;
+  background-color:  #a1a1a1;
+	cursor: pointer;
+
+}
+
+#edit-tab-button:hover {
+	color: #000000;
+	background-color: rgb(88, 88, 88);
+}
+
+
+
+.unselectable {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+input {
+	font-family: unset;
+	color: #808080;
+	outline: none;
+	font-size: 14px;
+	width: 350px;
+	height: 30px;
+	border-style: none;
+	border-radius: 8px;
+	padding-left: 10px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+input:focus {
+	color: #000;
+}
+
+#search {
+	width: 30%;
+}
+
+
+
+
+/* ----------------------------------------------------------------------------------- медиа запросы------------------------------ */
+
+@media only screen  and (max-width: 800px) {
+	.main {
+		flex-direction: column;
+		flex: 1 0 auto;
+		justify-content: space-evenly;
+	}
+	.todo-container {
+		width: 95%;
+	}
+
+	.tab-container {
+		width: 95%;
+	}
+	.tab-container {
+		width: 95%;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+	}
+	.tab-item {
+		width: 16vw;
+		height: 16vw;
+	}
+	.tab-item-add {
+		width: 16vw;
+		height: 16vw;
+	}
+
+}
