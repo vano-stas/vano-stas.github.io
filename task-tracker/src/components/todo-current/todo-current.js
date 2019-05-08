@@ -1,25 +1,24 @@
 import React, {useState} from "react";
 import TodoItem from "../todo-item/todo-item";
-import TodoForm from "../todo-form/todo-form";
-import HeaderApp from "../header-app/header-app";
 
 import "./todo-current.scss";
 
-function TodoCurrent ({todos, todo, index}) {
+function TodoCurrent ({ todos, onToggleCompleted }) {
  
     return (
         <div className="todo-current">
             <div className="current-header">
                 <h4>ToDo (4)</h4>
-                {/* <TodoForm addTodo={addTodo} /> */}
                 <i className="material-icons">view_module</i>
                 <i className="material-icons">view_list</i>
             </div>
 
-                { todos.map((todo, index) =>  {
+                { todos.map((todo) =>  {
+                    const id = todo.id;
                     if (todo.isCompleted === false) {
+                        
                         return (
-                            <TodoItem key={index} index={index} todo={todo} />
+                            <TodoItem key={todo.id} index={id} todo={todo} onToggleCompleted={onToggleCompleted} />
                         )
                     }
                 })

@@ -5,29 +5,6 @@ import "./todo-form.scss";
 
 function TodoForm ({addTodo}) {
 
-    // const [todos, setTodos] = useState ([
-    //     {
-    //         id: 1,
-    //         head: "Head 1",
-    //         text: "Пробую React хуки",
-    //         isCompleted: false
-    //     },
-    //     {
-    //         id: 2,
-    //         head: "Head 11",
-    //         text: "It is awesome",
-    //         isCompleted: false
-    //     },
-    // ]);
-
-
-    // const addTodo = val => {
-    //     val.id = todos.length + 1;
-    //     setTodos ([...todos, val]);
-    // }
-
-//--------------------------------------------------------
-
     const initFormState = {
         id: null,
         head: "",
@@ -51,6 +28,8 @@ function TodoForm ({addTodo}) {
         if (e.keyCode === 13) {
             addTodo(val);
             setVal(initFormState);
+
+
         }
         
     }
@@ -66,9 +45,9 @@ function TodoForm ({addTodo}) {
     
     return (
         <form onSubmit = {handleSubmit}>
-            <label htmlFor="head">Head </label>
+            <label htmlFor="head">Head:</label>
             <input type="text" name="head" value={val.head} onKeyDown={handleEnter} onChange={handleInputChange} />
-            <label htmlFor="text">Task </label>
+            <label htmlFor="text">Task:</label>
             <input type="text" name="text" value={val.text} onKeyDown={handleEnter} onChange={handleInputChange} />
             {/* <button>Add</button> */}
         </form> 

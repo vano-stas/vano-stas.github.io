@@ -5,11 +5,11 @@ import TodoCompleted from "../todo-completed/todo-completed";
 
 import "./main-app.scss";
 
-function MainApp ({todos}) {
+function MainApp ({todos, onToggleCompleted}) {
     return (
         <div className="main-app">
-            <TodoCurrent todos={todos} />
-            <TodoCompleted todos={todos} />
+            <TodoCurrent todos={todos} onToggleCompleted={onToggleCompleted} />
+            <TodoCompleted todos={todos} onToggleCompleted={onToggleCompleted} />
         </div>
     );
 };
