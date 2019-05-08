@@ -1,0 +1,13 @@
+.todo-completed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50%;
+  width: 100%;
+  overflow: auto;
+}
+
+.completed-text {
+  font-weight: bold;
+  color: green;
+}

@@ -1,0 +1,41 @@
+
+body, html {
+  margin: 0;
+  // padding: 0;
+  background: #ccc;
+  height: 100%;
+}
+
+.App {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1.5fr 3.75fr 3.75fr;
+  grid-template-rows: 1fr 4fr 4fr;
+  grid-template-areas: 
+    "nav header header"
+    "nav main main"
+    "nav main main";
+}
+
+.material-icons.md-12 { font-size: 12px; }
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+.material-icons {
+  user-select: none;
+}
+
+//------------------------------------------------------ navigation-----------------------------
+
+
+
+//------------------------------------------------------ header app-----------------------------
+
+
+
+//------------------------------------------------------ main app-----------------------------
+
+
+//-------------------------------------------------------------todo-item-------------------------------

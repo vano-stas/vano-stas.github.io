@@ -1,0 +1,66 @@
+.nav-app {
+  grid-area: nav;
+  height: 100vh;
+  background: rgb(4, 0, 56);
+  display: grid;
+  grid-template-rows: 1fr 8fr;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+
+    &:hover {
+      color: rgb(230, 246, 0);
+      // transform: scale(0.9);
+    }
+  }
+
+  img {
+    padding-right: 10px;
+  }
+}
+
+.navigation-bar {
+  ul {
+    list-style-type: none;
+    padding-left: 0px;
+
+    li{
+      height: 70px;
+
+      a {
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-decoration: none;
+        color: white; 
+        &:hover {
+          background: rgba(255, 255, 255, 0.45);
+        }
+
+        i {
+          padding-left: 20%;
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+.active {
+  background: rgba(255, 255, 255, 0.2);
+}
