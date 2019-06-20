@@ -1,4 +1,4 @@
-* {
+﻿* {
 	margin: 0px;
 	padding: 0px;
 }
@@ -295,7 +295,7 @@ body {
 }
 
 #item-add-url {
-	background: rgba(255, 255, 255, 0.3) url(/img/add-icon-08.png) ;
+	background: rgba(255, 255, 255, 0.3) url(./img/add-icon-08.png) ;
 	background-position: center center;
 	background-size: contain;
 	width: 100%;
@@ -314,7 +314,7 @@ body {
 
 #item-add-url:hover {
 	color: #FFFFFF;
-	background: rgba(255, 255, 255, 0.5) url(/img/add-icon-08.png) center center;
+	background: rgba(255, 255, 255, 0.5) url(./img/add-icon-08.png) center center;
 	background-size: contain;
 	box-shadow:  0 0 0 2px #ffffff;
 	transform: scale(1.1);
